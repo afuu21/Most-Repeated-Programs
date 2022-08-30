@@ -19,3 +19,17 @@ public class Main {
 5
 Enter the numbers: 1 3 2 4 5
 15
+
+//Alternate method : Using foreach loop
+import java.util.*;
+import java.lang.Math;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int a[] = {1,2,3,4,5};
+      int sum=0;
+      for(int x:a)
+        sum+=x;
+      System.out.println(sum);
+  }
+}
