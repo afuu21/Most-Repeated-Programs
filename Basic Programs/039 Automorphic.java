@@ -5,14 +5,19 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter n value: ");
     int n = sc.nextInt();
-    int temp = n%10;
-    if(temp==0 || temp==1 || temp==5 || temp==6)
-      System.out.println("Automorphic");
-    else
-      System.out.println("Not Automorphic");
+    int sq_n = (int)(Math.pow(n,2));
+    while(n!=0) {
+      if(n%10 != sq_n%10) {
+        System.out.println("Not Automorphic!");
+        return;
+      }
+      n/=10;
+      sq_n/=10;
+    }
+    System.out.println("Automorphic");
   }
 }
 
 //Output
-Enter n value: 8391
+Enter the value of n: 25
 Automorphic
